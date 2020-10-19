@@ -1,0 +1,16 @@
+def countVowelConsonant(string):
+    countVowel=0
+    countConsonant=0
+
+    for i in string:
+        if i.lower() in "aeiou":
+            countVowel+=1
+        elif i.lower() in "bcdfghjklmnpqrstvwxyz":
+            countConsonant+=1
+    return (countVowel, countConsonant)
+
+if __name__ == "__main__":
+    test = "Hey, My name is Mohit!"
+    vowels, consonants = countVowelConsonant(test)
+    print("Number of vowels: " + str(vowels))
+    print("Number of consonants: " + str(consonants))
